@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Teste</title>
+	<style>
+		* {
+		  padding: 0px;
+		  margin: 0px;
+		  box-sizing: border-box;
+		}
+		body {
+		  width: 100vw;
+		  height: 100vh;
+		  display: grid;
+		  place-items: center;
+
+		}
+		.container {
+		  display: grid;
+		  grid-template-columns: repeat(3, 1fr);
+		  gap: 25px;
+		}
+		.square {
+		  width: 200px;
+		  height: 200px;
+		  border: none;
+		}
+		.square:hover {
+			filter: brightness(.8);
+			cursor: pointer;
+		}
+		p {
+		  grid-column: 1 / 4;
+		  font-family: sans-serif;
+		  font-weight: bold;
+		  text-transform: uppercase;
+		  font-size: 2rem;
+		  text-align: center;
+		}
+		.red {
+		  background-color: red;
+		}
+		.blue {
+		  background-color: blue;
+		}
+		.green {
+		  background-color: green;
+		}
+		.yellow {
+		  background-color: yellow;
+		}
+		.orage {
+		  background-color: orange;
+		}
+		.purple {
+		  background-color: purple;
+		}
+		.surprise {
+			width: 100vw;
+			height: 100vh;
+			background-image: url('https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZ7ew5MBz1yxpSkEOdCIjUuU_tS-2rQcLDy9oS9EYLBa1C7-k2Ot7L9AIc51ozubfjpHzLTQZXUY3H0SvXUqaB5Te1M=w960-h720');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button onclick="surprise()" class="orage square"></button>
+		<button onclick="surprise()" class="red square"></button>
+		<button onclick="surprise()" class="yellow square"></button>
+		<p>Escolha uma cor</p>
+		<button onclick="surprise()" class="purple square"></button>
+		<button onclick="surprise()" class="blue square"></button>
+		<button onclick="surprise()" class="green square"></button>
+	</div>
+	<script>
+		const divContainer = document.querySelector('.container')
+		function surprise (){
+			divContainer.remove()
+			document.body.classList.toggle('surprise')
+		}
+	</script>
+</body>
+</html>
